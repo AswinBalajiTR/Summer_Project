@@ -12,24 +12,24 @@ data_to_save = \
     {
         # -----------------------------------------------------------------------------------------------------------------------
         "Version":
-            """7""",
+            """3""",
         # -----------------------------------------------------------------------------------------------------------------------
         "Year":
             """2025""",
         # -----------------------------------------------------------------------------------------------------------------------
         "Semester":
-            """Spring""",
+            """Summer""",
         # -----------------------------------------------------------------------------------------------------------------------
         "project_name":
-            """Interprofessional Education (IPE): Medicine and Public Health""",
+            """Voice Auth""",
         # -----------------------------------------------------------------------------------------------------------------------
         "Objective":
-            """ 
-            The goal of this project is to design, develop, and validate a multi-agent chatbot that is capable of facilitating educational conversations representing diverse team members in typical medical setting. Interprofessional Education (IPE) is a collaborative method to develop students as future team members working with colleagues from different fields. IPE occurs when students from two or more professions learn about, from, and with each other. Specifically, the project will focus on:
-            Customizing an open-source LLM (e.g., LLaMA3) using Retrieval-Augmented Generation (RAG) and/or fine-tuning techniques (e.g., LoRA) to create a chatbot agents tailored for IPE experiences.
-            Evaluating the chatbot's performance (e.g., adherence to instructions, depth of interactions, representation of professional fields) by simulating diverse student interactions using multiple LLM agents.
-            Conducting user interface (UI) and usability testing to improve user experience.
-            Optionally, integrating Learning Tools Interoperability (LTI) features to enable seamless usage in Learning Management Systems (LMS).
+            """The goal of this project is to develop a robust voice-based authentication system that verifies a user's identity 
+            through both their voice and a unique spoken command. Unlike traditional systems that rely solely on transcription 
+            or fixed pitch recognition, this system is designed to accurately match voices even when pitch, tone, or speaking 
+            conditions vary—such as speaking softly in an office or with high energy in a noisy environment. By combining speaker
+            recognition with command verification, it aims to provide a more secure and user friendly alternative to conventional 
+            biometric logins.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Dataset":
@@ -40,9 +40,13 @@ data_to_save = \
         # -----------------------------------------------------------------------------------------------------------------------
         "Rationale":
             """
-            Generative AI (genAI) technology offers a novel approach to supporting IPE given that routinely the diversity of team member participants is limited, and some fields are under-represented in IPE training but influential in "real world" teams. By using LLM-based chatbots for this educational
-             interventions, there is potential to both improve how learning experiences are delivered and  enhance student post-IPE performance . In this project, we will explore how an AI-driven team collaboration can  act as an educational 
-             intervention.
+            Current voice systems primarily focus on speech-to-text or basic voice detection, lacking true voice to voice 
+            matching for authentication. However, human voice varies naturally depending on context, mood, and environment 
+            posing a major challenge for rigid systems. This project addresses that gap by building a model that learns the 
+            unique characteristics of a user's voice across varying pitches and conditions. It ensures that authentication 
+            remains consistent and reliable, regardless of how or where the user speaks. This innovation brings voice biometrics
+            closer to real-world usability and strengthens the future of secure, hands free authentication in both personal 
+            and professional settings.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Approach":
@@ -83,11 +87,11 @@ data_to_save = \
             """,
 
         # -----------------------------------------------------------------------------------------------------------------------
-        "Proposed by": "Dr. Ryan Watkins and Andy Wiss",
-        "Proposed by email": "rwatkins@gwu.edu",
+        "Proposed by": "Aswin Balaji Thippa Ramesh, Rahul Arvind, Siddharth Saravanan",
+        "Proposed by email": "at119@gwu.edu, rahul.arvind@gwu.edu, siddharth.saravanan@gwu.edu",
         "instructor": "Amir Jafari",
         "instructor_email": "ajafari@gmail.com",
-        "github_repo": "https://github.com/amir-jafari/Capstone",
+        "github_repo": "https://github.com/AswinBalajiTR/Summer_Project",
         # -----------------------------------------------------------------------------------------------------------------------
     }
 os.makedirs(

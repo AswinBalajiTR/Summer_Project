@@ -12,16 +12,16 @@ data_to_save = \
     {
         # -----------------------------------------------------------------------------------------------------------------------
         "Version":
-            """7""",
+            """2""",
         # -----------------------------------------------------------------------------------------------------------------------
         "Year":
             """2025""",
         # -----------------------------------------------------------------------------------------------------------------------
         "Semester":
-            """Spring""",
+            """Summer""",
         # -----------------------------------------------------------------------------------------------------------------------
         "project_name":
-            """Interprofessional Education (IPE): Medicine and Public Health""",
+            """KG Package - Risk Reports to KG""",
         # -----------------------------------------------------------------------------------------------------------------------
         "Objective":
             """ 
@@ -34,38 +34,52 @@ data_to_save = \
         # -----------------------------------------------------------------------------------------------------------------------
         "Dataset":
             """
-            The dataset for fine-tuning and customization is still TBD. However, data will likely consist of relevant open-source academic texts,
-             dialogue datasets, and domain-specific content to build the required context for medical field perspectives.
+            The dataset consists of different bank risk reports, which are open source & similar in structure and content. 
+            The reports are sourced from reputable financial institutions and regulatory bodies.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Rationale":
             """
-            Generative AI (genAI) technology offers a novel approach to supporting IPE given that routinely the diversity of team member participants is limited, and some fields are under-represented in IPE training but influential in "real world" teams. By using LLM-based chatbots for this educational
-             interventions, there is potential to both improve how learning experiences are delivered and  enhance student post-IPE performance . In this project, we will explore how an AI-driven team collaboration can  act as an educational 
-             intervention.
+            The development of a knowledge graph from bank risk reports is driven by several key motivations:
+
+            **1. Enhanced Data Accessibility**: Risk reports often contain valuable insights and data that are difficult to extract and analyze in their raw formats. By converting these reports into a knowledge graph, we can facilitate easier access to critical information, enabling stakeholders to make informed decisions.
+            **2. Improved Understanding of Relationships**: Financial risk management involves complex interdependencies between various risk factors. A knowledge graph allows for the visualization of these relationships, helping users to understand how different risks impact one another and the overall financial health of an institution.
+            **3. Support for Advanced Analytics**: The structured nature of a knowledge graph enables advanced analytical techniques, such as querying and reasoning over the data. This can lead to the discovery of new insights, trends, and patterns that may not be immediately apparent from traditional report formats.
+            **4. Streamlined Reporting and Compliance**: Regulatory bodies require banks to maintain transparency regarding their risk exposures. A knowledge graph can simplify the reporting process by providing a clear and concise representation of risk data, making it easier for banks to comply with regulatory requirements.
+            **5. Facilitation of Knowledge Sharing**: By creating a standardized knowledge graph, we can promote knowledge sharing across different departments and institutions. This can lead to better collaboration and a more unified approach to risk management.
+            **6. Scalability and Adaptability**: As new risk reports are generated, the knowledge graph can be easily updated and expanded. This scalability ensures that the system remains relevant and useful as the financial landscape evolves.
+            Overall, the rationale for this project is to transform raw risk data into a usable, explainable, and interactive format that enhances decision-making and risk management practices within the banking sector.
             """,
+
         # -----------------------------------------------------------------------------------------------------------------------
         "Approach":
             """
-            The project will proceed in several phases:
-            **Requirement Analysis**: Collaborate with lead researchers to define key components of IPE experiences and specify chatbot performance
-            requirements.
-            **Development**: Customize one or more open-source LLMs to create the initial version of the chatbot using RAG and fine-tuning methods.
-            **Validation**: Conduct multi-agent testing to evaluate the chatbot's performance across multiple medical/health domains and with varied inputs, focusing on 
-            metrics such as adherence to guidelines, professional field representations, and ability to stay on topic.
-            **Usability Evaluation**: Perform usability testing with end users, including metrics for user satisfaction, ease of use, and learning outcomes.
-            **(Optional) Integration**: Develop LTI integration to connect the chatbot with existing LMS tools to ensure accessibility for students in course
-            environments.
+            The project will be executed in several phases to ensure a systematic and thorough development of the knowledge graph from risk reports:
+            **1. Requirement Analysis**: Collaborate with financial analysts and risk management experts to define the objectives and key performance indicators for the knowledge graph. This phase will also involve understanding the specific needs of end-users.
+            **2. Data Collection**: Gather the six different bank risk reports from various sources, ensuring that the dataset is comprehensive and representative of the types of risks encountered in the banking sector.
+            **3. Document Parsing**: Implement document parsing techniques to extract raw text and tables from the risk reports. This will involve using tools like PyMuPDF, pdfplumber, camelot, or tabula to ensure accurate extraction of information.
+            **4. Preprocessing**: Clean and normalize the extracted text to prepare it for analysis. This includes sentence segmentation, removal of headers/footers, and detection of temporal expressions to enhance the quality of the data.
+            **5. Named Entity Recognition (NER)**: Utilize pre-trained models such as SpaCy or FinBERT-NER to identify key financial entities within the text. This step may also involve fine-tuning the models or adding rule-based patterns to improve accuracy.
+            **6. Relation Extraction (RE)**: Develop methods to identify relationships between the recognized entities. This will start with pattern matching and dependency parsing, and may incorporate transformer models like SpanBERT or REBEL for enhanced performance.
+            **7. Triple Formation**: Convert the extracted facts into a structured format by forming triples (subject, relation, object). This structured representation will facilitate the construction of the knowledge graph.
+            **8. Knowledge Graph Construction**: Use libraries such as networkx or Neo4j to build the knowledge graph. Define node types (e.g., risk, metric, driver, time) and edge types (e.g., impacts, correlates_with, increased_by) to accurately represent the relationships.
+            **9. Graph Enrichment (Optional)**: Enhance the knowledge graph by adding metadata from external knowledge bases (e.g., Wikidata, ESG databases) and inferred relationships to provide additional context and insights.
+            **10. Graph Visualization**: Implement visualization tools like pyvis, Graphistry, or plotly to create an interactive user interface. This will allow users to explore the relationships within the knowledge graph and gain insights visually.
+            **11. Graph Query & Export**: Develop functionalities for querying the knowledge graph (e.g., "What affects capital adequacy?") and exporting the graph in various formats (e.g., Neo4j .graphml, RDF/JSON-LD, CSV triples) for further analysis.
+            **12. Testing and Validation**: Conduct thorough testing of the entire pipeline to ensure accuracy and usability. Gather feedback from end-users to refine the system and improve its effectiveness.
+            This structured approach will ensure the successful development of a usable, explainable, and interactive knowledge graph from the risk reports.
             """,
+
         # -----------------------------------------------------------------------------------------------------------------------
         "Timeline":
             """
             This is a rough timeline for the project:
-             **Weeks 1-2**: Familiarization with project requirements, intellectual humility constructs, and open-source tools.
-             **Weeks 3-8**: Design, develop, and build a working prototype.
-             **Weeks 9-12**: Iterative testing and improvement of chatbot performance, incorporating feedback from simulated interactions.
-             **Weeks 13-16**: Multi-agent testing and usability evaluation.
-             **Weeks 17-18**: Final reporting, documentation, and presentation of outcomes.
+            **Weeks 1-2**: Requirement analysis and collaboration with financial analysts to define objectives and key performance indicators for the knowledge graph.
+            **Weeks 3-4**: Data collection and gathering of six different bank risk reports from various sources, ensuring dataset comprehensiveness.
+            **Weeks 5-6**: Document parsing to extract raw text and tables from the risk reports using tools like PyMuPDF, pdfplumber, camelot, or tabula; followed by preprocessing of extracted text, including cleaning, normalization, and sentence segmentation.
+            **Weeks 7-8**: Implementation of Named Entity Recognition (NER) using pre-trained models (e.g., SpaCy, FinBERT-NER) to identify key financial entities, and relation extraction to identify links between entities using pattern matching and dependency parsing.
+            **Weeks 9-10**: Triple formation to convert extracted facts into structured triples (subject, relation, object) and knowledge graph construction using networkx or Neo4j, defining node and edge types.
+            **Weeks 11-12**: Graph visualization implementation using tools like pyvis or plotly, development of graph query functionalities, and testing and validation of the entire pipeline; followed by documentation of the development process and preparation of the final report.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Expected Number Students":
@@ -75,19 +89,21 @@ data_to_save = \
         # -----------------------------------------------------------------------------------------------------------------------
         "Possible Issues":
             """
-            Potential challenges for this project include:
-             **Limited Training Data**: Finding appropriate datasets for Retrieval-Augmented Generation or fine-tuning the LLM may be a limiting factor.
-             **Complexity of Interdisciplinary Teams**: Designing prompts and interactions to genuinely foster  collaborations of diverse teams, requiring careful iteration and feedback.
-             **Interdisciplinary Collaboration**: This project spans multiple disciplines (e.g., Public Health, Medicine, Education, Data Science, Software Engineering), 
-             requiring effective collaboration and understanding across fields.
+            Potential challenges that may arise during the project include:
+            **1. Data Quality and Consistency**: The risk reports may vary in quality, format, and structure, which could complicate the parsing and extraction processes. Ensuring consistency across different reports will be crucial.
+            **2. Document Parsing Limitations**: Extracting text and tables from PDFs and DOCX files can be challenging due to variations in formatting. Some reports may contain complex layouts that are difficult to parse accurately.
+            **3. Named Entity Recognition Accuracy**: The effectiveness of the NER process depends on the quality of the pre-trained models used. There may be challenges in accurately identifying financial entities, especially if they are not well-represented in the training data.
+            **4. Relation Extraction Complexity**: Identifying relationships between entities can be complex, particularly in cases where the relationships are implied rather than explicitly stated. This may require sophisticated techniques and additional fine-tuning.
+            **5. Scalability of the Knowledge Graph**: As new risk reports are added over time, ensuring that the knowledge graph remains scalable and maintainable will be a challenge. The system must be designed to accommodate future growth.
+            Addressing these issues proactively will be key to the successful development and implementation of the knowledge graph from risk reports.
             """,
 
         # -----------------------------------------------------------------------------------------------------------------------
-        "Proposed by": "Dr. Ryan Watkins and Andy Wiss",
-        "Proposed by email": "rwatkins@gwu.edu",
+        "Proposed by": "Aswin Balaji Thippa Ramesh, Rahul Arvind, Siddharth Saravanan",
+        "Proposed by email": "at119@gwu.edu, rahul.arvind@gwu.edu, siddharth.saravanan@gwu.edu",
         "instructor": "Amir Jafari",
         "instructor_email": "ajafari@gmail.com",
-        "github_repo": "https://github.com/amir-jafari/Capstone",
+        "github_repo": "https://github.com/AswinBalajiTR/Summer_Project",
         # -----------------------------------------------------------------------------------------------------------------------
     }
 os.makedirs(

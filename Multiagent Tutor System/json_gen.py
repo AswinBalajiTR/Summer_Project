@@ -25,45 +25,53 @@ data_to_save = \
         # -----------------------------------------------------------------------------------------------------------------------
         "Objective":
             """ 
-            The goal of this project is to design, develop, and evaluate a multi-agent tutoring system where each AI model serves as a domain specific agent.
-            When a user poses a question, the agents engage in an internal dialogue sharing, debating, and refining ideas to collaboratively generate the most accurate and educationally effective response, 
-            simulating the dynamics of a panel of expert tutors.
+            The goal of this project is to design, develop, and evaluate a multi-agent tutoring system where each 
+            AI model serves as a domain specific agent. When a user poses a question, the agents engage in an internal 
+            dialogue sharing, debating, and refining ideas to collaboratively generate the most accurate and 
+            educationally effective response, simulating the dynamics of a panel of expert tutors.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Dataset":
             """
-            The dataset for fine-tuning and customization is still TBD. However, data will likely consist of relevant open-source academic texts,
-             dialogue datasets, and domain-specific content to build the required context for medical field perspectives.
+            The OpenBookQA dataset is a collection of multiple-choice questions designed to evaluate reasoning and 
+            knowledge comprehension. It is particularly useful for training AI models in educational contexts, making 
+            it an ideal choice for the MultiAgent Tutor System project.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Rationale":
             """
-            Generative AI (genAI) technology offers a novel approach to supporting IPE given that routinely the diversity of team member participants is limited, and some fields are under-represented in IPE training but influential in "real world" teams. By using LLM-based chatbots for this educational
-             interventions, there is potential to both improve how learning experiences are delivered and  enhance student post-IPE performance . In this project, we will explore how an AI-driven team collaboration can  act as an educational 
-             intervention.
+            Traditional tutoring systems often rely on single-agent models that generate static, one-size-fits-all
+            responses. A multi-agent AI framework offers a transformative alternative—where each model acts as a domain 
+            expert and engages in internal discussions to collaboratively generate accurate, context-aware, and 
+            pedagogically rich answers. This approach enables dynamic reasoning, interpretability & human-like 
+            collaboration and redefines the tutoring experience through advanced data science and AI, making it more 
+            effective, adaptive, and aligned with real-world learning needs.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Approach":
             """
             The project will proceed in several phases:
-            **Requirement Analysis**: Collaborate with lead researchers to define key components of IPE experiences and specify chatbot performance
-            requirements.
-            **Development**: Customize one or more open-source LLMs to create the initial version of the chatbot using RAG and fine-tuning methods.
-            **Validation**: Conduct multi-agent testing to evaluate the chatbot's performance across multiple medical/health domains and with varied inputs, focusing on 
-            metrics such as adherence to guidelines, professional field representations, and ability to stay on topic.
-            **Usability Evaluation**: Perform usability testing with end users, including metrics for user satisfaction, ease of use, and learning outcomes.
-            **(Optional) Integration**: Develop LTI integration to connect the chatbot with existing LMS tools to ensure accessibility for students in course
-            environments.
+            **Requirement Analysis**: Collaborate with educational experts to define learning objectives and performance requirements for the tutoring system.
+            **Literature Review**: Review existing tutoring systems and advancements in AI and multiagent frameworks to identify best practices and relevant datasets, including OpenBookQA.
+            **System Design**: Design the architecture of the multiagent system, defining agent roles and communication protocols for collaborative responses.
+            **Data Collection and Preparation**: Gather and preprocess relevant datasets for training, ensuring data is clean and structured for effective model training.
+            **Model Selection and Customization**: Choose suitable open-source language models and customize them using techniques like Retrieval-Augmented Generation (RAG) to align with educational goals.
+            **Development of Multiagent Framework**: Implement the multiagent system, enabling agents to interact and collaboratively generate responses through internal dialogue.
+            **Testing and Validation**: Conduct iterative testing to evaluate performance metrics such as accuracy and user satisfaction, refining the system based on feedback.
+            **Usability Evaluation**: Perform usability testing with end users to assess effectiveness and gather feedback for further improvements.
+            **Integration and Deployment**: Develop integration capabilities with existing Learning Management Systems (LMS) and deploy the system for broader accessibility.
+            **Final Reporting and Documentation**: Document the development process and prepare a final report summarizing outcomes, performance metrics, and recommendations for future enhancements.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Timeline":
             """
             This is a rough timeline for the project:
-             **Weeks 1-2**: Familiarization with project requirements, intellectual humility constructs, and open-source tools.
-             **Weeks 3-8**: Design, develop, and build a working prototype.
-             **Weeks 9-12**: Iterative testing and improvement of chatbot performance, incorporating feedback from simulated interactions.
-             **Weeks 13-16**: Multi-agent testing and usability evaluation.
-             **Weeks 17-18**: Final reporting, documentation, and presentation of outcomes.
+            **Weeks 1-2**: Requirement analysis and collaboration with educational experts to define objectives and performance requirements.
+            **Weeks 3-4**: Conduct literature review on existing tutoring systems and advancements in AI, identifying relevant datasets.
+            **Weeks 5-6**: Design the architecture of the multiagent system, define agent roles, and establish communication protocols.
+            **Weeks 7-8**: Gather and preprocess relevant datasets for training, ensuring data quality and structure; select and customize open-source language models using techniques like Retrieval-Augmented Generation (RAG).
+            **Weeks 9-10**: Develop the multiagent framework, enabling agents to interact and collaboratively generate responses; conduct iterative testing and validation to evaluate performance metrics.
+            **Weeks 11-12**: Perform usability testing with end users to assess effectiveness, gather feedback for improvements, and develop integration capabilities with existing Learning Management Systems (LMS); finalize reporting and documentation.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Expected Number Students":
@@ -74,10 +82,12 @@ data_to_save = \
         "Possible Issues":
             """
             Potential challenges for this project include:
-             **Limited Training Data**: Finding appropriate datasets for Retrieval-Augmented Generation or fine-tuning the LLM may be a limiting factor.
-             **Complexity of Interdisciplinary Teams**: Designing prompts and interactions to genuinely foster  collaborations of diverse teams, requiring careful iteration and feedback.
-             **Interdisciplinary Collaboration**: This project spans multiple disciplines (e.g., Public Health, Medicine, Education, Data Science, Software Engineering), 
-             requiring effective collaboration and understanding across fields.
+            **Limited Training Data**: Finding appropriate datasets for Retrieval-Augmented Generation or fine-tuning the LLM may be a limiting factor.
+            **Complexity of Interdisciplinary Teams**: Designing prompts and interactions to genuinely foster collaboration among diverse teams, requiring careful iteration and feedback.
+            **Interdisciplinary Collaboration**: This project spans multiple disciplines (e.g., Public Health, Medicine, Education, Data Science, Software Engineering), necessitating effective communication and understanding across fields.
+            **User  Engagement**: Ensuring that the multiagent system maintains user interest and engagement throughout the learning process can be challenging.
+            **Scalability**: Developing a system that can efficiently handle a growing number of users and interactions without compromising performance.
+            **Integration Challenges**: Ensuring seamless integration with existing Learning Management Systems (LMS) and addressing technical compatibility issues.
             """,
 
         # -----------------------------------------------------------------------------------------------------------------------
